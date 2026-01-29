@@ -8,9 +8,12 @@
  *   Max ops: 14
  *   Rating: 1
  */
+// need to indicate the bit that match either 1 or 0
+// 0x7 = 0111, 0xE = 1110, 0x6 = 0110
 int bitMatch(int x, int y)
 {
-    return 2;
+    return (~ (x ^ y));
+    // (x & y) | (~x & ~y)
 }
 
 int test_bitMatch(int x, int y)

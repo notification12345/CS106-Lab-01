@@ -8,9 +8,12 @@
  *   Max ops: 8
  *   Rating: 1
  */
+
+ // for x that upper 17 bits are the same, x can fit into short
+ // chekc if upper 17 bits of x is the same
 int fitsShort(int x)
 {
-    return 2;
+    return !((x >> 15) ^ (x >> 16));
 }
 
 int test_fitsShort(int x)

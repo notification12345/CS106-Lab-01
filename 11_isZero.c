@@ -19,7 +19,7 @@ int test_isZero(int x)
 
 int main(void)
 {
-    int x = 0;
+    int x = 3;
     printf("expected: %x\n", isZero(x));
     printf("actual  : %x\n", test_isZero(x));
 }
